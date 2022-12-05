@@ -1,10 +1,10 @@
 import styles from "./NavBar.module.css";
 import Logo from "../../public/logo.png";
 import Image from "next/image";
-import Account from "../../public/account.png";
-import Cart from "../../public/cart.png";
-import Search from "../../public/search.png";
-import Like from "../../public/like.png";
+import Account_vecor_icon from "../../public/account_vector_icon.svg";
+import Cart_vecor_icon from "../../public/cart_vector_icon.svg";
+import Like_vecor_icon from "../../public/like_vector_icon.svg";
+import Search_vecor_icon from "../../public/search_vector_icon.svg";
 
 interface Props {
   style?: React.CSSProperties;
@@ -16,16 +16,40 @@ const NavBar = ({ style }: Props) => (
       <Image src={Logo} alt="Logo" />
     </div>
     <div className={styles.nav_link}>
-      <p>Home</p>
-      <p>Shop</p>
-      <p>About</p>
-      <p>Contact</p>
+      <p style={{ cursor: "pointer" }}>Home</p>
+      <p style={{ cursor: "pointer" }}>Shop</p>
+      <p style={{ cursor: "pointer" }}>About</p>
+      <p style={{ cursor: "pointer" }}>Contact</p>
     </div>
-    <div className={styles.nav_logo} >
-      <Image src={Account} alt="Account" />
-      <Image src={Cart} alt="Cart" />
-      <Image src={Search} alt="Search" />
-      <Image src={Like} alt="Like" />
+    <div className={styles.nav_icon}>
+      <Image
+        style={{ cursor: "pointer" }}
+        src={Account_vecor_icon}
+        alt="Account"
+        height={30}
+        width={30}
+      />
+      <Image
+        style={{ cursor: "pointer" }}
+        src={Cart_vecor_icon}
+        alt="Cart"
+        height={30}
+        width={30}
+      />
+      <Image
+        style={{ cursor: "pointer" }}
+        src={Search_vecor_icon}
+        alt="Search"
+        height={30}
+        width={30}
+      />
+      <Image
+        style={{ cursor: "pointer" }}
+        src={Like_vecor_icon}
+        alt="Like"
+        height={30}
+        width={30}
+      />
     </div>
   </div>
 );
