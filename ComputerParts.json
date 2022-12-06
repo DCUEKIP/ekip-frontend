@@ -1,0 +1,46 @@
+{
+    "phone": [
+        {
+        "id": 1,
+        "name": "Samsung Galaxy S7",
+        "image_url": "https://en.wikipedia.org/wiki/Samsung_Galaxy_S7#/media/File:Samsung_Galaxy_S7_(Black_Onyx).png",
+        "price": 600,
+        "currency": "USD"
+        },
+        {
+        "id": 2,
+        "name": "iPhone 6S",
+        "image_url": "https://en.wikipedia.org/wiki/IPhone_6S#/media/File:IPhone_6S.png",
+        "price": 800,
+        "currency": "USD"
+        },
+        {
+        "id": 3,
+        "name": "LG G5",
+        "image_url": "https://en.wikipedia.org/wiki/LG_G5#/media/File:LG_G5_(black).png",
+        "price": 700,
+        "currency": "USD"
+        },
+        {
+        "id": 4,
+        "name": "Nexus 6P",
+        "image_url": "https://en.wikipedia.org/wiki/Nexus_6P#/media/File:Nexus_6P_(black).png",
+        "price": 500,
+        "currency": "USD"
+        },
+        {
+        "id": 5,
+        "name": "Nokia 3310",
+        "image_url": "https://en.wikipedia.org/wiki/Nokia_3310#/media/File:Nokia_3310_2017_New_Edition.jpg",
+        "price": 50,
+        "currency": "USD"
+        },
+        {
+        "id": 6,
+        "name": "OnePlus 5",
+        "image_url": "https://en.wikipedia.org/wiki/OnePlus_5#/media/File:OnePlus_5_(black).png",
+        "price": 500,
+        "currency": "USD"
+        }
+    ]
+}

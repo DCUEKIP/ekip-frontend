@@ -13,6 +13,30 @@
   cursor: pointer;
 }
 
+.nav_tabs {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+
+.nav_tabs::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.nav_tabs:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
 .nav_link {
   display: flex;
   gap: 50px;

@@ -16,10 +16,10 @@ const NavBar = ({ style }: Props) => (
       <Image src={Logo} alt="Logo" />
     </div>
     <div className={styles.nav_link}>
-      <p style={{ cursor: "pointer" }}>Home</p>
-      <p style={{ cursor: "pointer" }}>Shop</p>
-      <p style={{ cursor: "pointer" }}>About</p>
-      <p style={{ cursor: "pointer" }}>Contact</p>
+      <p className={styles.nav_tabs}>Home</p>
+      <p className={styles.nav_tabs}>Shop</p>
+      <p className={styles.nav_tabs}>About</p>
+      <p className={styles.nav_tabs}>Contact</p>
     </div>
     <div className={styles.nav_icon}>
       <Image
