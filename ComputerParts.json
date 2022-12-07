@@ -3,43 +3,92 @@
         {
         "id": 1,
         "name": "Samsung Galaxy S7",
-        "image_url": "https://en.wikipedia.org/wiki/Samsung_Galaxy_S7#/media/File:Samsung_Galaxy_S7_(Black_Onyx).png",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/03/Samsung_Galaxy_S7_and_S7_Edge.png",
         "price": 600,
         "currency": "USD"
         },
         {
         "id": 2,
         "name": "iPhone 6S",
-        "image_url": "https://en.wikipedia.org/wiki/IPhone_6S#/media/File:IPhone_6S.png",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/IPhone_6s_vector.svg/800px-IPhone_6s_vector.svg.png",
         "price": 800,
         "currency": "USD"
         },
         {
         "id": 3,
         "name": "LG G5",
-        "image_url": "https://en.wikipedia.org/wiki/LG_G5#/media/File:LG_G5_(black).png",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/LG_G5.jpg/1280px-LG_G5.jpg",
         "price": 700,
         "currency": "USD"
         },
         {
         "id": 4,
         "name": "Nexus 6P",
-        "image_url": "https://en.wikipedia.org/wiki/Nexus_6P#/media/File:Nexus_6P_(black).png",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/A_Nexus_6p_runs_android_8.1.png/800px-A_Nexus_6p_runs_android_8.1.png",
         "price": 500,
         "currency": "USD"
         },
         {
         "id": 5,
         "name": "Nokia 3310",
-        "image_url": "https://en.wikipedia.org/wiki/Nokia_3310#/media/File:Nokia_3310_2017_New_Edition.jpg",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Nokia_3310_Blue_R7309170_%28retouch%29.png/150px-Nokia_3310_Blue_R7309170_%28retouch%29.png",
         "price": 50,
         "currency": "USD"
         },
         {
         "id": 6,
         "name": "OnePlus 5",
-        "image_url": "https://en.wikipedia.org/wiki/OnePlus_5#/media/File:OnePlus_5_(black).png",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Oneplus_5_on_display_at_London_launch_event_-_5.jpg/1920px-Oneplus_5_on_display_at_London_launch_event_-_5.jpg",
         "price": 500,
+        "currency": "USD"
+        },
+        {
+        "id": 7,
+        "name": "Xiaomi Mi 8",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/df/XiaomiMi8ProFront20190714.jpg",
+        "price": 400,
+        "currency": "USD"
+        },
+        {
+        "id": 8,
+        "name": "Sony Xperia X2",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Sony_Xperia_Z2_face_20140429.jpg",
+        "price": 600,
+        "currency": "USD"
+        },
+        {
+        "id": 9,
+        "name": "HTC U Ultra",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/HTC_U_Ultra.png/800px-HTC_U_Ultra.png",
+        "price": 700,
+        "currency": "USD"
+        },
+        {
+        "id": 10,
+        "name": "Huawei P10",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Huawei_P10_front.jpg/800px-Huawei_P10_front.jpg",
+        "price": 600,
+        "currency": "USD"
+        },
+        {
+        "id": 11,
+        "name": "Google Pixel 4a",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Pixel_4a_front_schematic.svg",
+        "price": 700,
+        "currency": "USD"
+        },
+        {
+        "id": 12,
+        "name": "Samsung Galaxy Note 7",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Samsung_Galaxy_Note_7.png/800px-Samsung_Galaxy_Note_7.png",
+        "price": 1000,
+        "currency": "USD"
+        },
+        {
+        "id": 13,
+        "name": "iPhone 8",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/IPhone_8_Product_Red_vector.svg/800px-IPhone_8_Product_Red_vector.svg.png",
+        "price": 300,
         "currency": "USD"
         }
     ]

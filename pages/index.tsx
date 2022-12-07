@@ -8,8 +8,17 @@ import Footer from "../components/Footer/Footer";
 import RTX_4090 from "../public/vector_RTX_4090.svg";
 import shop_parts from "../public/vector_shop_parts.svg";
 import shop_accessories from "../public/vector_shop_accessories.svg";
+import ComputerParts from "../ComputerParts.json";
+import React from "react";
+import shop_center from "../public/shop_center.png";
+import vector_shop_center from "../public/vector_shop_center.svg";
+import vector_instagram from "../public/vector_insta.svg";
+import vector_facebook from "../public/vector_facebook.svg";
+import vector_twitter from "../public/vector_twitter.svg";
 
 const Home: NextPage = () => {
+  const [viewMore, setViewMore] = React.useState(4);
+
   return (
     <div className={styles.container}>
       <NavBar />
@@ -47,6 +56,124 @@ const Home: NextPage = () => {
         <div>
           <Image src={shop_accessories} alt="Shop Accessories" />
           <h3>Shop Accessories</h3>
+        </div>
+      </div>
+      <div
+        style={{
+          // display: "flex",
+          // flexDirection: "column",
+          minHeight: "100vh",
+          // backgroundColor: "#2CA9",
+          justifyContent: "center",
+          gap: "20%",
+        }}
+      >
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            margin: "20px",
+          }}
+        >
+          <h1>Top picks for you</h1>
+          <p>A mix of new arrivals, popular choices, and great deals</p>
+        </div>
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(4, 1fr)",
+            gridAutoRows: "minmax(300px, auto)",
+          }}
+        >
+          {ComputerParts.phone.slice(0, viewMore).map((part) => {
+            return (
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  cursor: "pointer",
+                }}
+              >
+                <Image
+                  src={part.image_url}
+                  layout="fixed"
+                  width={100}
+                  height={100}
+                  alt={part.name}
+                />
+                <h3>
+                  {part.name.length > 12
+                    ? part.name.slice(0, 12) + "..."
+                    : part.name}
+                </h3>
+                <p>
+                  {part.price} {part.currency}
+                </p>
+              </div>
+            );
+          })}
+        </div>
+        <h3
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            textDecoration: "underline",
+            cursor: "pointer",
+          }}
+          onClick={() => {
+            console.log("View More");
+            setViewMore(viewMore + 4);
+          }}
+        >
+          View More
+        </h3>
+      </div>
+      <div
+        style={{
+          minHeight: "100vh",
+          backgroundColor: "#2CA9FF",
+        }}
+      >
+        <div
+          style={{
+            width: "80%",
+            height: "100%",
+          }}
+        >
+          <Image
+            src={vector_shop_center}
+            layout="responsive"
+            alt="shop_center"
+          />
+        </div>
+      </div>
+      <div
+        style={{
+          minHeight: "100vh",
+        }}
+      >
+        <h1
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          Our Social Media
+        </h1>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-around",
+            marginTop: "200px",
+          }}
+        >
+          <Image src={vector_instagram} layout="fixed" alt="instagram" />
+          <Image src={vector_facebook} layout="fixed" alt="facebook" />
+          <Image src={vector_twitter} layout="fixed" alt="twitter" />
         </div>
       </div>
       <Footer />
