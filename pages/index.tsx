@@ -39,7 +39,15 @@ const Home: NextPage = () => {
             <span style={{ color: "#2CA9FF" }}>NEW</span> Nvidia <br /> RTX 4090
           </h1>
         </div>
-        <Image src={RTX_4090} alt="RTX 4090" />
+        <Image
+          src={
+            "https://images.hothardware.com/contentimages/article/3242/content/16x9_2133x1200_highres-geforce-rtx-4090-review.jpg"
+          }
+          layout="fixed"
+          width={883}
+          height={466}
+          alt="RTX 4090"
+        />
       </div>
       <div
         style={{
