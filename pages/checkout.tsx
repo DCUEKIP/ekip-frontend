@@ -32,6 +32,10 @@ const InfoButton = ({ isSmall, content, name }: Props) => {
 const Products: NextPage = () => {
   const [isPayPalSelected, setIsPayPalSelected] = React.useState(false);
 
+  const handleSubmit = () => {
+    alert("Thank you for your purchase!");
+  };
+
   return (
     <>
       <NavBar />
@@ -188,7 +192,9 @@ const Products: NextPage = () => {
               justifyContent: "center",
             }}
           >
-            <button className={styles.button}>Place Order</button>
+            <button className={styles.button} onClick={() => handleSubmit()}>
+              Place Order
+            </button>
           </div>
         </div>
       </div>
