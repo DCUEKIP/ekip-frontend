@@ -21,7 +21,7 @@
 .narrow {
   flex: 1;
   font-size: 20px;
-  background-color: lightblue;
+/*  background-color: lightblue;*/
   /* Just so it's visible */
 }
 .wide {
@@ -62,4 +62,24 @@
 /*  background-color: black;*/
   src: "../public/location-pin.png";
 /*  background-color: black;*/
+}
+
+.form {
+  margin: auto;
+  text-align: left;
+}
+
+.input_form {
+    width: 75%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.submit {
+  margin-left: 0px;
+  width: 25%;
 }

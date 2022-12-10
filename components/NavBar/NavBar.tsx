@@ -41,8 +41,22 @@ const NavBar = ({ style }: Props) => {
         >
           Shop
         </p>
-        <p className={styles.nav_tabs}>About</p>
-        <p className={styles.nav_tabs}>Contact</p>
+        <p
+          onClick={() => {
+            router.push("/about");
+          }}
+          className={styles.nav_tabs}
+        >
+          About
+        </p>
+        <p
+          onClick={() => {
+            router.push("/contact");
+          }}
+          className={styles.nav_tabs}
+        >
+          Contact
+        </p>
       </div>
       <div className={styles.nav_icon}>
         <Image

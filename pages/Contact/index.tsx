@@ -53,22 +53,23 @@ const Contact: NextPage = () => {
                 </div>
             </div>
             <div className={styles.narrow}>
-                <div className={styles.NameForm}>
+                <div className={styles.form}>
                     <p>Your Name</p>
-                    <input className={styles.input_form} />
+                    <input className={styles.input_form} type="text" />
                 </div>
-                <div className={styles.NameForm}>
+                <div className={styles.form}>
                     <p>Email Adress</p>
-                    <input className={styles.input_form} />
+                    <input className={styles.input_form} type="text" />
                 </div>
-                <div className={styles.NameForm}>
+                <div className={styles.form}>
                     <p>Subject</p>
-                    <input className={styles.input_form} />
+                    <input className={styles.input_form} type="text" />
                 </div>
-                <div className={styles.NameForm}>
+                <div className={styles.form}>
                     <p>Message</p>
-                    <input className={styles.input_form} />
+                    <input className={styles.input_form} type="text" />
                 </div>
+                <input className={styles.submit} type="submit" value="Submit" />
             </div>
         </div>
         <Footer />
