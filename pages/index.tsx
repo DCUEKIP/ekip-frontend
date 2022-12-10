@@ -15,9 +15,11 @@ import vector_shop_center from "../public/vector_shop_center.svg";
 import vector_instagram from "../public/vector_insta.svg";
 import vector_facebook from "../public/vector_facebook.svg";
 import vector_twitter from "../public/vector_twitter.svg";
+import { useRouter } from "next/router";
 
 const Home: NextPage = () => {
   const [viewMore, setViewMore] = React.useState(4);
+  const router = useRouter();
 
   return (
     <div className={styles.container}>
@@ -49,11 +51,21 @@ const Home: NextPage = () => {
           gap: "20%",
         }}
       >
-        <div>
+        <div
+          onClick={() => {
+            router.push("/products");
+          }}
+          style={{ cursor: "pointer" }}
+        >
           <Image src={shop_parts} alt="Shop Parts" />
           <h3>Shop Parts</h3>
         </div>
-        <div>
+        <div
+          onClick={() => {
+            router.push("/products");
+          }}
+          style={{ cursor: "pointer" }}
+        >
           <Image src={shop_accessories} alt="Shop Accessories" />
           <h3>Shop Accessories</h3>
         </div>
