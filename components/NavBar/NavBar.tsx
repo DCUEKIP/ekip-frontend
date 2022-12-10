@@ -51,7 +51,7 @@ const NavBar = ({ style }: Props) => {
         </p>
         <p
           onClick={() => {
-            router.push("/contact");
+            router.push("/Contact");
 
           }}
           className={styles.nav_tabs}
