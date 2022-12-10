@@ -48,7 +48,6 @@ const addToCart = (product: any) => {
                 [{id: product.id, quantity: 1}]
             ));
         }
-        alert(window.localStorage.getItem('cart'))
         alert('Add ' + product.name + "["+ product.id + "] to cart.")
     }
 }
