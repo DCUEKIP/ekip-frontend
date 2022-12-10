@@ -24,7 +24,7 @@ const getSubTotalPrice = () => {
         return 0;
 
     JSON.parse(products).map(
-        (product: { id: number; name: string, image_url: string, price: number, currency: string, quantity: number}) => {
+        (product: { id: number; quantity: number}) => {
             const productData = getProductById(product.id);
             if (productData)
                 total += (product.quantity * productData?.price);
