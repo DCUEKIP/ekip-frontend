@@ -77,88 +77,59 @@ const renderCartProducts = () => {
 
 
 const NavBar = ({ style }: Props) => {
-  const [cartVisibility, setCartVisibility] = useState(false);
-  const router = useRouter();
-
-  return (
-    <div className={styles.navbar}>
-      <div
-        className={styles.logo}
-        onClick={() => {
-          router.push("/");
-        }}
-      >
-        <Image src={Logo} alt="Logo" />
-      </div>
-      <div className={styles.nav_link}>
-        <p
-          onClick={() => {
-            router.push("/");
-          }}
-          className={styles.nav_tabs}
-        >
-          Home
-        </p>
-        <p
-          onClick={() => {
-            router.push("/products");
-          }}
-          className={styles.nav_tabs}
-        >
-          Shop
-        </p>
-        <p
-          onClick={() => {
-            router.push("/about");
-          }}
-          className={styles.nav_tabs}
-        >
-          About
-        </p>
-        <p
-          onClick={() => {
-            router.push("/contact");
-
-          }}
-          className={styles.nav_tabs}
-        >
-          Contact
-        </p>
-      </div>
-      <div className={styles.nav_icon}>
-        <Image
-          style={{ cursor: "pointer" }}
-          src={Account_vecor_icon}
-          alt="Account"
-          height={30}
-          width={30}
-        />
-        <Image
-          style={{ cursor: "pointer" }}
-          src={Cart_vecor_icon}
-          onClick={() => {
-            router.push("/cart");
-          }}
-          alt="Cart"
-          height={30}
-          width={30}
-        />
-        <Image
-          style={{ cursor: "pointer" }}
-          src={Search_vecor_icon}
-          alt="Search"
-          height={30}
-          width={30}
-        />
-        <Image
-          style={{ cursor: "pointer" }}
-          src={Like_vecor_icon}
-          alt="Like"
-          height={30}
-          width={30}
-        />
-      </div>
-      {cartVisibility ?
+    const [cartVisibility, setCartVisibility] = useState(false);
+    const router = useRouter();
+    return (
+        <div className={styles.navbar}>
+            <div className={styles.logo}>
+                <Image src={Logo} alt="Logo" />
+            </div>
+            <div className={styles.nav_link}>
+                <p className={styles.nav_tabs} onClick={() => {
+                    router.push("/");
+                }}>Home</p>
+                <p className={styles.nav_tabs} onClick={() => {
+                    router.push("/products");
+                }} >Shop</p>
+                <p className={styles.nav_tabs} onClick={() => {
+                    router.push("/about");
+                }}>About</p>
+                <p className={styles.nav_tabs} onClick={() => {
+                    router.push("/contact");
+                }}>Contact</p>
+            </div>
+            <div className={styles.nav_icon}>
+                <Image
+                    style={{ cursor: "pointer" }}
+                    src={Account_vecor_icon}
+                    alt="Account"
+                    height={30}
+                    width={30}
+                />
+                <Image
+                    onClick={() => setCartVisibility(!cartVisibility)}
+                    style={{ cursor: "pointer" }}
+                    src={Cart_vecor_icon}
+                    alt="Cart"
+                    height={30}
+                    width={30}
+                />
+                <Image
+                    style={{ cursor: "pointer" }}
+                    src={Search_vecor_icon}
+                    alt="Search"
+                    height={30}
+                    width={30}
+                />
+                <Image
+                    style={{ cursor: "pointer" }}
+                    src={Like_vecor_icon}
+                    alt="Like"
+                    height={30}
+                    width={30}
+                />
+            </div>
+            {cartVisibility ?
                 <div className={styles.cartDetails}>
                     <div className={styles.cartDetailsHeader}>
                         <h3>Shopping Cart</h3>
@@ -180,9 +151,8 @@ const NavBar = ({ style }: Props) => {
             :
                 <></>
             }
-    </div>
-  );
-};
-
+        </div>
+    );
+}
 
 export default NavBar;
