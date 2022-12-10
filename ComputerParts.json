@@ -3,28 +3,28 @@
         {
         "id": 1,
         "name": "Samsung Galaxy S7",
-        "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/03/Samsung_Galaxy_S7_and_S7_Edge.png",
+        "image_url": "https://cdn.shopify.com/s/files/1/0092/4090/3758/products/SamsungGalaxyS7Repair_c4db7054-ab5d-497d-af30-f46322489df4.png?v=1656593838",
         "price": 600,
         "currency": "USD"
         },
         {
         "id": 2,
         "name": "iPhone 6S",
-        "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/IPhone_6s_vector.svg/800px-IPhone_6s_vector.svg.png",
+        "image_url": "http://wmstatic.global.ssl.fastly.net/ml/7160822-f-027952c0-4d5e-4372-ae01-5b68d161e99d.png?width=320&height=320&whitespace=true",
         "price": 800,
         "currency": "USD"
         },
         {
         "id": 3,
         "name": "LG G5",
-        "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/LG_G5.jpg/1280px-LG_G5.jpg",
+        "image_url": "https://img.helpforsmartphone.com/ce9c487f09275a94c298d0a0f625ca9f-w300",
         "price": 700,
         "currency": "USD"
         },
         {
         "id": 4,
         "name": "Nexus 6P",
-        "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/A_Nexus_6p_runs_android_8.1.png/800px-A_Nexus_6p_runs_android_8.1.png",
+        "image_url": "https://consumer.huawei.com/content/dam/huawei-cbg-site/common/mkt/list-image/phones/nexus-6p/nexus-6p-listimage-black.png",
         "price": 500,
         "currency": "USD"
         },
