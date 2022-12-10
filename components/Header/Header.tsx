@@ -2,6 +2,7 @@ import styles from "./Header.module.css";
 
 interface Props {
     style?: React.CSSProperties;
+    pageName: string;
 }
 
 const Header = ({ style, pageName }: Props) => (

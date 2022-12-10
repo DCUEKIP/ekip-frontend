@@ -7,7 +7,7 @@ import Header from "../../components/Header/Header";
 
 
 const Contact: NextPage = () => {
-  const [viewMore, setViewMore] = React.useState(4);
+//   const [viewMore, setViewMore] = React.useState(4);
 
   return (
     <div className={styles.container}>
@@ -16,9 +16,9 @@ const Contact: NextPage = () => {
         <div className={styles.parent}>
             <div className={styles.wide}>
                 <div className={styles.contactCard}>
-                    <h className={styles.titleCard}>
+                    <h2 className={styles.titleCard}>
                         Adress
-                    </h>
+                    </h2>
                     <p className={styles.textCard}>
                         236 5th SE Avenue,
                     </p>
@@ -30,9 +30,9 @@ const Contact: NextPage = () => {
                     </p>
                 </div>
                 <div className={styles.contactCard}>
-                    <h className={styles.titleCard}>
+                    <h2 className={styles.titleCard}>
                         Phone
-                    </h>
+                    </h2>
                     <p className={styles.textCard}>
                         Mobile: +(84) 546-6789
                     </p>
@@ -41,9 +41,9 @@ const Contact: NextPage = () => {
                     </p>
                 </div>
                 <div className={styles.contactCard}>
-                    <h className={styles.titleCard}>
+                    <h2 className={styles.titleCard}>
                         Working Time
-                    </h>
+                    </h2>
                     <p className={styles.textCard}>
                         Monday-Friday: 9:00 - 22:00
                     </p>
