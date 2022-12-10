@@ -15,9 +15,11 @@ import vector_shop_center from "../public/vector_shop_center.svg";
 import vector_instagram from "../public/vector_insta.svg";
 import vector_facebook from "../public/vector_facebook.svg";
 import vector_twitter from "../public/vector_twitter.svg";
+import { useRouter } from "next/router";
 
 const Home: NextPage = () => {
   const [viewMore, setViewMore] = React.useState(4);
+  const router = useRouter();
 
   return (
     <div className={styles.container}>
@@ -49,11 +51,21 @@ const Home: NextPage = () => {
           gap: "20%",
         }}
       >
-        <div>
+        <div
+          onClick={() => {
+            router.push("/products");
+          }}
+          style={{ cursor: "pointer" }}
+        >
           <Image src={shop_parts} alt="Shop Parts" />
           <h3>Shop Parts</h3>
         </div>
-        <div>
+        <div
+          onClick={() => {
+            router.push("/products");
+          }}
+          style={{ cursor: "pointer" }}
+        >
           <Image src={shop_accessories} alt="Shop Accessories" />
           <h3>Shop Accessories</h3>
         </div>
@@ -89,6 +101,7 @@ const Home: NextPage = () => {
           {ComputerParts.phone.slice(0, viewMore).map((part) => {
             return (
               <div
+                key={part.id}
                 style={{
                   display: "flex",
                   flexDirection: "column",
@@ -132,21 +145,62 @@ const Home: NextPage = () => {
       </div>
       <div
         style={{
-          minHeight: "100vh",
+          minHeight: "600px",
           backgroundColor: "#2CA9FF",
         }}
       >
         <div
           style={{
-            width: "80%",
-            height: "100%",
+            // width: "100%",
+            height: "100vh",
           }}
         >
-          <Image
+          {/* <Image
             src={vector_shop_center}
-            layout="responsive"
+            // layout="responsive"
+            // width={300}
+            height={340}
             alt="shop_center"
-          />
+          /> */}
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              color: "white",
+              textAlign: "center",
+              flexDirection: "column",
+            }}
+          >
+            <h1
+              style={{
+                marginTop: "200px",
+              }}
+            >
+              Trade-in <br /> Your Products
+            </h1>
+            <div
+              style={{
+                border: "1px solid white",
+                padding: "10px",
+                width: "200px",
+                cursor: "pointer",
+              }}
+            >
+              Get Quote
+            </div>
+            <div
+              style={{
+                border: "1px solid white",
+                padding: "10px",
+                marginTop: "15px",
+                cursor: "pointer",
+                width: "200px",
+              }}
+            >
+              Share Locator
+            </div>
+          </div>
         </div>
       </div>
       <div
@@ -171,9 +225,30 @@ const Home: NextPage = () => {
             marginTop: "200px",
           }}
         >
-          <Image src={vector_instagram} layout="fixed" alt="instagram" />
-          <Image src={vector_facebook} layout="fixed" alt="facebook" />
-          <Image src={vector_twitter} layout="fixed" alt="twitter" />
+          <Image
+            style={{
+              cursor: "pointer ",
+            }}
+            src={vector_instagram}
+            layout="fixed"
+            alt="instagram"
+          />
+          <Image
+            style={{
+              cursor: "pointer ",
+            }}
+            src={vector_facebook}
+            layout="fixed"
+            alt="facebook"
+          />
+          <Image
+            style={{
+              cursor: "pointer ",
+            }}
+            src={vector_twitter}
+            layout="fixed"
+            alt="twitter"
+          />
         </div>
       </div>
       <Footer />
