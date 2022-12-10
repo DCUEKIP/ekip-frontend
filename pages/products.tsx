@@ -7,18 +7,14 @@ import Footer from "../components/Footer/Footer";
 import React from "react";
 import ComputerParts from "../ComputerParts.json";
 import shop_banner from "../public/shop_banner.svg";
+import Header from "../components/Header/Header";
 
 const Products: NextPage = () => {
 
   return (
     <div className={styles.container}>
         <NavBar />
-        <div className={styles.shopBanner}>
-            <h3>Shop</h3>
-            <p>
-                <span>Home  {">"}</span>  Shop
-            </p>
-        </div>
+        <Header pageName="Shop" />
 
         <div className={styles.shopGridWrapper}>
             <div className={styles.shopGrid}>
