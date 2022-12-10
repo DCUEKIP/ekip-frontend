@@ -51,7 +51,7 @@ const NavBar = ({ style }: Props) => {
         </p>
         <p
           onClick={() => {
-            router.push("/Contact");
+            router.push("/contact");
 
           }}
           className={styles.nav_tabs}
@@ -70,6 +70,9 @@ const NavBar = ({ style }: Props) => {
         <Image
           style={{ cursor: "pointer" }}
           src={Cart_vecor_icon}
+          onClick={() => {
+            router.push("/cart");
+          }}
           alt="Cart"
           height={30}
           width={30}
