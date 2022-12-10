@@ -101,6 +101,7 @@ const Home: NextPage = () => {
           {ComputerParts.phone.slice(0, viewMore).map((part) => {
             return (
               <div
+                key={part.id}
                 style={{
                   display: "flex",
                   flexDirection: "column",
