@@ -4,9 +4,13 @@ const nextConfig = {
   swcMinify: true,
   images: {
     domains: [
-      "upload.wikimedia.org",
-      "fonts.googleapis.com",
-      "images.hothardware.com",
+        'upload.wikimedia.org',
+        "images.hothardware.com",
+        'cdn.shopify.com',
+        'wmstatic.global.ssl.fastly.net',
+        'img.helpforsmartphone.com',
+        'fonts.googleapis.com',
+        'consumer.huawei.com'
     ],
   },
 };
