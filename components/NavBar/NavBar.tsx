@@ -27,7 +27,7 @@ const getSubTotalPrice = () => {
         (product: { id: Key; name: string, image_url: string, price: number, currency: string, quantity: number}) => {
             const productData = getProductById(product.id);
             if (productData)
-                total += (product.quantity * productData.price);
+                total += (product.quantity * productData?.price);
         })
     return total;
 }
