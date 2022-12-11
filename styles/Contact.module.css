@@ -39,7 +39,7 @@
   background-color: white;
 
   /* Add border */
-  border: 1px solid #bacdd8;
+/*  border: 1px solid #bacdd8;*/
 
   /* Add space between the border and the content */
   padding: 8px;
@@ -49,6 +49,8 @@
 }
 
 .titleCard {
+/*  background-color: white;*/
+  margin-left: 10px;
   font-size: 20px;
 }
 
@@ -58,9 +60,10 @@
 }
 
 .locationIcon {
-  width: 32px;
-/*  background-color: black;*/
-  src: "../public/location-pin.png";
+  width: 20%;
+/*  margin-right: 10%;*/
+/*  margin-left: 10%;*/
+/*  background-color: purple;*/
 /*  background-color: black;*/
 }
 
@@ -82,4 +85,16 @@
 .submit {
   margin-left: 0px;
   width: 25%;
+}
+
+.header_text {
+/*  background-color: red;*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page_header {
+  text-align: center;
+  padding: 60px;
 }
