@@ -9,6 +9,8 @@ import Cart_header_icon from "../../public/cart_header_icon.svg";
 import { Key, useState } from "react";
 import ComputerParts from "../../ComputerParts.json";
 import { useRouter } from "next/router";
+import DeleteIcon from "../../public/delete_icon.png";
+import Button from "../Button/Button";
 
 interface Props {
   style?: React.CSSProperties;
@@ -25,8 +27,7 @@ const getSubTotalPrice = () => {
   JSON.parse(products).map(
     (product: { id: number; quantity: number; price: number }) => {
       const productData = getProductById(product.id) as any;
-      if (productData)
-        total += product.quantity * productData?.price;
+      if (productData) total += product.quantity * productData?.price;
     }
   );
   return total;
@@ -123,7 +124,7 @@ const NavBar = ({ style }: Props) => {
         <p
           className={styles.nav_tabs}
           onClick={() => {
-            router.push("/contact");
+            router.push("/Contact");
           }}
         >
           Contact
@@ -167,7 +168,18 @@ const NavBar = ({ style }: Props) => {
             <Image
               src={Cart_header_icon}
               height={50}
+              onClick={() => {
+                window.localStorage.removeItem("cart");
+                setCartVisibility(!cartVisibility);
+              }}
+              style={{ cursor: "pointer" }}
+            />
+            <Image
+              src={DeleteIcon}
+              height={20}
+              width={20}
               onClick={() => setCartVisibility(!cartVisibility)}
+              style={{ cursor: "pointer" }}
             />
           </div>
           <div className={styles.cartDetailsContent}>
@@ -182,6 +194,29 @@ const NavBar = ({ style }: Props) => {
           ) : (
             <></>
           )}
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-evenly",
+              width: "100%",
+              marginBottom: "20px",
+            }}
+          >
+            <Button
+              onClick={() => {
+                router.push("/checkout");
+              }}
+            >
+              Checkout
+            </Button>
+            <Button
+              onClick={() => {
+                router.push("/cart");
+              }}
+            >
+              Cart
+            </Button>
+          </div>
         </div>
       ) : (
         <></>
