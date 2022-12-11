@@ -154,6 +154,7 @@ const Products: NextPage = () => {
               {products !== null &&
                 JSON.parse(products as string).map((product: any) => (
                   <div
+                    key={product.id}
                     style={{
                       display: "flex",
                       justifyContent: "space-between",
