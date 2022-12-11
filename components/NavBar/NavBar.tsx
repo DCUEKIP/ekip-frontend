@@ -124,7 +124,7 @@ const NavBar = ({ style }: Props) => {
         <p
           className={styles.nav_tabs}
           onClick={() => {
-            router.push("/Contact");
+            router.push("/contact");
           }}
         >
           Contact
