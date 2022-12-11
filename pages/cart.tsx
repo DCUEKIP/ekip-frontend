@@ -39,7 +39,7 @@ const Cart: NextPage = () => {
             return (
                 JSON.parse(products).map(
                     (product: { id: number; quantity: number}) => {
-                        const productData = getProductById(product.id)
+                        const productData = getProductById(product.id) as any;
                         return (
                             <div className={styles.product_line} key={product.id}>
                                 <div className={styles.picture_tab}>
