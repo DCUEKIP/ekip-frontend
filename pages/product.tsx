@@ -26,7 +26,7 @@ const addToCart = (product: any, qty: number) => {
             window.localStorage.getItem('cart') !== null &&
             window.localStorage.getItem('cart') !== undefined) {
             //Cart update
-            let products = window.localStorage.getItem('cart');
+            let products = window.localStorage.getItem('cart') as any;
 
             const tmpProducts = JSON.parse(products);
             let isIncreased = false;
@@ -56,7 +56,7 @@ const Product: NextPage = () => {
     const router = useRouter();
     const { id } = router.query;
     // @ts-ignore
-    const product = getProductById(id);
+    const product = getProductById(id) as any;
     const [quantity, setQuantity] = useState(1);
     const [viewMore, setViewMore] = React.useState(4);
 
@@ -141,7 +141,7 @@ const Product: NextPage = () => {
                                 if (quantity !== 1)
                                     setQuantity(quantity - 1)
                             }}>-</button>
-                            <input type={"text"}  value={quantity} onChange={(e) => setQuantity(e.target.value)}/>
+                            <input type={"text"}  value={quantity} onChange={(e) => setQuantity(Number(e.target.value))}/>
                             <button onClick={() => setQuantity(quantity + 1)}>+</button>
                         </div>
                         <button onClick={() => addToCart(product, quantity)}>
@@ -199,9 +199,9 @@ const Product: NextPage = () => {
                     <p>Reviews [5]</p>
                 </div>
                 <p>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
                 </p>
                 <div className={styles.productImages}>
                     <div>
