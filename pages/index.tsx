@@ -136,13 +136,16 @@ const Home: NextPage = () => {
             );
           })}
         </div>
-        <h3
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            textDecoration: "underline",
-            cursor: "pointer",
-          }}
+          <h3
+              style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  cursor: "pointer",
+                  borderBottom: 'solid 1px',
+                  width: '110px',
+                  margin: '0 auto',
+                  marginBottom: '56px',
+              }}
           onClick={() => {
             console.log("View More");
             setViewMore(viewMore + 4);

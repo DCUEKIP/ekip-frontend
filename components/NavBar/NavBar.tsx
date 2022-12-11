@@ -63,7 +63,7 @@ const renderCartProducts = () => {
                     const productData = getProductById(product.id)
                     return (
                         <div key={product.id} className={styles.cartProduct}>
-                            <Image src={productData.image_url} height={50} width={50} />
+                            <Image src={productData.image_url} height={50} width={50} className={styles.cartProductLogo} />
                             <div>
                                 <p>{productData.name}</p>
                                 <p>{product.quantity} x ${productData.price}</p>
@@ -75,14 +75,13 @@ const renderCartProducts = () => {
     }
 }
 
-
 const NavBar = ({ style }: Props) => {
     const [cartVisibility, setCartVisibility] = useState(false);
     const router = useRouter();
     return (
         <div className={styles.navbar}>
-            <div className={styles.logo}>
-                <Image src={Logo} alt="Logo" />
+            <div className={styles.logo} onClick={() => router.push("/")}>
+                <Image src={Logo} alt="Logo" height={32} width={32}/>
             </div>
             <div className={styles.nav_link}>
                 <p className={styles.nav_tabs} onClick={() => {
