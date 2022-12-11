@@ -4,8 +4,9 @@ import Image from "next/image";
 import styles from "../styles/Checkout.module.css";
 import NavBar from "../components/NavBar/NavBar";
 import Footer from "../components/Footer/Footer";
-import React from "react";
+import React, { useEffect } from "react";
 import Header from "../components/Header/Header";
+import ComputerParts from "../ComputerParts.json";
 
 type Props = {
   isSmall: boolean;
@@ -31,17 +32,53 @@ const InfoButton = ({ isSmall, content, name }: Props) => {
 
 const Products: NextPage = () => {
   const [isPayPalSelected, setIsPayPalSelected] = React.useState(false);
+  const [products, setProducts] = React.useState(null);
+
+  useEffect(() => {
+    if (typeof window !== "undefined")
+      setProducts(window.localStorage.getItem("cart") as any);
+  }, []);
+
+  const getProductById = (id: any) => {
+    let productFinal = undefined;
+    try {
+      ComputerParts.phone.map((product) => {
+        if (product.id === parseInt(id)) productFinal = product;
+      });
+    } catch (e) {
+      console.log(
+        "DEV ERROR: ProductID isn't satisfying. Got: [id:" + id + "]"
+      );
+    }
+
+    console.log(productFinal);
+    return productFinal;
+  };
+
+  const totalPrice = () => {
+    let total = 0;
+    products !== null &&
+      JSON.parse(products as string).map(
+        (product: { id: number; quantity: number }) => {
+          const productData = getProductById(product.id) as any;
+          total += product.quantity * productData.price;
+        }
+      );
+    return total as unknown as string;
+  };
 
   const handleSubmit = () => {
+    window.localStorage.removeItem("cart");
     alert("Thank you for your purchase!");
+    setProducts(null);
   };
 
   return (
-    <>
+    <div>
       <NavBar />
       <Header pageName="Checkout" />
       <div className={styles.container}>
-        <div className={styles.left}>
+        <div>
           <h1>Billing details</h1>
           <div
             style={{
@@ -89,43 +126,91 @@ const Products: NextPage = () => {
             name={"Additional Information"}
           />
         </div>
-        <div className={styles.right}>
+        <div>
           <div
             style={{
               display: "flex",
-              gap: "150px",
+              width: "100%",
+              justifyContent: "space-between",
             }}
           >
             <div
               style={{
                 display: "flex",
                 flexDirection: "column",
+                width: "100%",
               }}
             >
-              <h2>Product</h2>
-              <p>**product**</p>
-              <p>Subtotal</p>
-              <p>Shipping</p>
-              <p>Total</p>
-            </div>
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "flex-end",
-              }}
-            >
-              <h2>Subtotal</h2>
-              <p>**price**</p>
-              <p>**price**</p>
-              <p>FREE</p>
-              <p
+              <div
                 style={{
-                  color: "#4B9CD3",
+                  display: "flex",
+                  justifyContent: "space-between",
+                  width: "100%",
                 }}
               >
-                $PRICE
-              </p>
+                <h2>Product</h2>
+                <h2>Subtotal</h2>
+              </div>
+              {products !== null &&
+                JSON.parse(products as string).map((product: any) => (
+                  <div
+                    key={product.id}
+                    style={{
+                      display: "flex",
+                      justifyContent: "space-between",
+                      width: "100%",
+                    }}
+                  >
+                    <div
+                      style={{
+                        display: "flex",
+                      }}
+                    >
+                      {/* @ts-ignore */}
+                      <p>{getProductById(product.id)?.name} x </p>
+                      {/* @ts-ignore */}
+                      <p>{product.quantity}</p>
+                    </div>
+                    <div
+                      style={{
+                        display: "flex",
+                        gap: "10px",
+                      }}
+                    >
+                      {/* @ts-ignore */}
+                      <p>{getProductById(product.id)?.price}</p>
+                      {/* @ts-ignore */}
+                      <p>{getProductById(product.id)?.currency}</p>
+                    </div>
+                  </div>
+                ))}
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                }}
+              >
+                <p>Subtotal</p>
+                <p>{totalPrice()} USD</p>
+              </div>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                }}
+              >
+                <p>Shipping</p>
+                <p>FREE</p>
+              </div>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                }}
+              >
+                <p>Total</p>
+                <p>{totalPrice()} USD</p>
+              </div>
             </div>
           </div>
           <div
@@ -199,8 +284,9 @@ const Products: NextPage = () => {
         </div>
       </div>
       <Footer />
-    </>
+    </div>
   );
+  // }
 };
 
 export default Products;

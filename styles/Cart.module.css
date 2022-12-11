@@ -11,7 +11,7 @@
   align-items: center;
   justify-content: center;
   height: 400px;
-  width:100%;
+  width: 100%;
   /*position: absolute;
   background-color: darkred;
   display: inline;
@@ -20,18 +20,18 @@
 }
 .narrow {
   flex: 1;
-/*  font-size: 20px;*/
-/*  background-color: lightblue;*/
+  /*  font-size: 20px;*/
+  /*  background-color: lightblue;*/
   /* Just so it's visible */
 }
 .wide {
   flex: 2;
   /* Grow to rest of container */
-/*  background-color: lightgreen;*/
+  /*  background-color: lightgreen;*/
   /* Just so it's visible */
 }
 
-.contactCard{
+.contactCard {
   margin-top: 10%;
   margin-left: 15%;
   margin-right: 15%;
@@ -84,29 +84,33 @@
 .product {
   width: 25%;
   margin-left: 20%;
-/*  background-color: red;*/
+  /*  background-color: red;*/
+  color: white;
 }
 
 .price {
   width: 15%;
-/*  background-color: white;*/
+  /*  background-color: white;*/
+  color: white;
 }
 
 .quantity {
   width: 15%;
-/*  background-color: pink;*/
+  color: white;
+  /*  background-color: pink;*/
 }
 
 .subtotal {
   width: 25%;
-/*  background-color: purple;*/
+  color: white;
+  /*  background-color: purple;*/
 }
 
 .product_line {
   height: auto;
   display: flex;
   font-size: 20px;
-/*  background-color: #4b9cd3;*/
+  /*  background-color: #4b9cd3;*/
   margin-top: 10px;
   margin-block: 10px;
   /*margin-right: 20px;
@@ -119,7 +123,7 @@
 .tab_cart {
   height: auto;
   font-size: 20px;
-/*  background-color: red;*/
+  /*  background-color: red;*/
   margin-top: 10px;
   margin-block: 10px;
   margin-right: 20px;
@@ -135,17 +139,17 @@
 
 .product_tab {
   width: 25%;
-/*  background-color: red;*/
+  /*  background-color: red;*/
 }
 
 .price_tab {
   width: 15%;
-/*  background-color: white;*/
+  /*  background-color: white;*/
 }
 
 .quantity_tab {
   width: 15%;
-/*  background-color: pink;*/
+  /*  background-color: pink;*/
 }
 
 .quantity_style {
@@ -155,5 +159,5 @@
 
 .subtotal_tab {
   width: 25%;
-/*  background-color: purple;*/
+  /*  background-color: purple;*/
 }

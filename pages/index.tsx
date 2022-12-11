@@ -116,6 +116,9 @@ const Home: NextPage = () => {
                   alignItems: "center",
                   cursor: "pointer",
                 }}
+                onClick={() => {
+                  router.push(`/product?id=${part.id}`);
+                }}
               >
                 <Image
                   src={part.image_url}
@@ -140,8 +143,11 @@ const Home: NextPage = () => {
           style={{
             display: "flex",
             justifyContent: "center",
-            textDecoration: "underline",
             cursor: "pointer",
+            borderBottom: "solid 1px",
+            width: "110px",
+            margin: "0 auto",
+            marginBottom: "56px",
           }}
           onClick={() => {
             console.log("View More");
