@@ -8,6 +8,23 @@ import ComputerParts from "../ComputerParts.json";
 import Image from "next/image";
 import { useRouter } from "next/router";
 
+const getSubTotalPrice = () => {
+  let total = 0;
+  let products = null;
+
+  if (typeof window !== "undefined")
+    products = window.localStorage.getItem("cart");
+  if (products === null || products.length === 0) return 0;
+
+  JSON.parse(products).map(
+    (product: { id: number; quantity: number; price: number }) => {
+      const productData = getProductById(product.id) as any;
+      if (productData) total += product.quantity * productData?.price;
+    }
+  );
+  return total;
+};
+
 const getProductById = (id: any) => {
   let productFinal = undefined;
   try {
@@ -73,7 +90,7 @@ const Cart: NextPage = () => {
         <div className={styles.narrow}>
           <div className={styles.contactCard}>
             <h2 className={styles.titleCard}>Cart Total :</h2>
-            <p className={styles.textCard}>$0</p>
+            <p className={styles.textCard}>$ {getSubTotalPrice()}</p>
             <button
               className={styles.button}
               onClick={() => {
